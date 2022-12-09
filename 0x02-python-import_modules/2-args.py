@@ -5,8 +5,10 @@ if __name__ != "__main__":
 import sys
 
 n = len(sys.argv)
+args = n - 1
 
-print(f"{n - 1} arguments:" if (n - 1) != 1 else f"{n - 1} argument:")
+print(f"{args} arguments" if (args) != 1 else f"{args} argument", end='')
+print(f":" if args > 0 else ".")
 
 if n > 1:
     for i in range(1, n):
