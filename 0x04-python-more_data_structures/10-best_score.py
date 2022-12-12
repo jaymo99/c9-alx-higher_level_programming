@@ -5,7 +5,7 @@ def best_score(a_dictionary):
         return None
 
     scores = list(map(lambda key: a_dictionary[key], a_dictionary))
-    largest = scores[0]
+    largest = 0
 
     # determine largest score
     for i in range(len(scores)):
