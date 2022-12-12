@@ -6,16 +6,7 @@ def square_matrix_simple(matrix=[]):
 
     new_matrix = []
 
-    ''' Deep copy matrix to new_matrix '''
-    for i in range(len(matrix)):
-        temp = []
-        for item in matrix[i]:
-            temp.append(item)
-        new_matrix.append(temp)
-    ''' ---------------------------- '''
-
-    for row in new_matrix:
-        for item in row:
-            row[row.index(item)] = item ** 2
+    for row in matrix:
+        new_matrix.append(list(map(lambda x: x ** 2, row)))
 
     return new_matrix
