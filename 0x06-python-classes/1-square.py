@@ -2,8 +2,6 @@
 
 """Define a new class, Square.
 
-Classes:
-    Square
 """
 
 
@@ -13,6 +11,7 @@ class Square:
     def __init__(self, size):
         """Initialize square.
 
-        Constructs all the necessary attributes for the square object.
+        Args:
+            size (int): Size of the square object
         """
         self.__size = size
