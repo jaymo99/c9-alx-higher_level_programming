@@ -16,7 +16,14 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
-        self.__position = position
+
+        if type(position) is not tuple or \
+            len(position) != 2 or \
+            not all(isinstance(num, int) for num in position) or \
+            not all(num >= 0 for num in position): \
+                raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = position
         
     @property
     def size(self):
@@ -44,11 +51,13 @@ class Square:
     def position(self, value):
         '''set position of a square object'''
 
-        if type(position) is tuple or \
-            len(position) != 2 or \
+        if type(value) is not tuple or \
+            len(value) != 2 or \
             not all(isinstance(num, int) for num in value) or \
             not all(num >= 0 for num in value): \
                 raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = value
 
     def area(self):
         """compute & return the current area of a square object"""
