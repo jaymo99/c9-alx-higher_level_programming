@@ -40,7 +40,7 @@ class Rectangle:
     def __str__(self):
         '''String representation of rectangle object'''
 
-        if self.__width >= 0 and self.height >= 0:
+        if self.__width >= 0 and self.__height >= 0:
             for h in range(self.__height):
                 for w in range(self.__width):
                     print("#", end='')
