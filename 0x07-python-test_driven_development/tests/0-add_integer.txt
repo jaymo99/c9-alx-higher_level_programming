@@ -10,37 +10,66 @@ add_integer is a function that adds 2 integers and returns the sum
 * Returns an integer: the addition of a and b
 
 
--------------------------------------------------
 Examples
--------------------------------------------------
+=====================================
 
 >>> add_integer = __import__('0-add_integer').add_integer
 >>> 
+
+Positive integers
+-----------------------------------------
 >>> print(add_integer(1, 2))
 3
->>> print(add_integer(100, -2))
-98
 >>> print(add_integer(2))
 100
+
+Positive and Negative
+------------------------------------------
+>>> print(add_integer(100, -2))
+98
+
+Float and Negative
+-------------------------------------------
 >>> print(add_integer(100.3, -2))
 98
+
+Negative integers
+-------------------------------------------
 >>> print(add_integer(-30, -50))
 -80
+
+Two Strings
+-------------------------------------------
 >>> try:
 ...     print(add_integer("James", "Kariuki"))
 ... except Exception as e:
 ...     print(e)
 ... 
 a must be an integer
+
+Integer and String
+-------------------------------------------
 >>> try:
 ...     print(add_integer(4, "School"))
 ... except Exception as e:
 ...     print(e)
 ... 
 b must be an integer
+
+None
+-------------------------------------------
 >>> try:
 ...     print(add_integer(None))
 ... except Exception as e:
 ...     print(e)
 ... 
 a must be an integer
+
+Float overflow
+-------------------------------------------
+>>> try:
+...     print(add_integer(3.33e54798))
+... except Exception as e:
+...     print(e)
+... 
+cannot convert float infinity to integer
