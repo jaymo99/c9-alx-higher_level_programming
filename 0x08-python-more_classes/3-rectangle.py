@@ -38,13 +38,17 @@ class Rectangle:
             raise TypeError("height must be an integer")
 
     def __str__(self):
-        '''String representation of rectangle object'''
+        '''
+        Return string representation of rectangle object
+        '''
 
         if self.__width > 0 and self.__height > 0:
+            rect = []
             for h in range(self.__height):
                 for w in range(self.__width):
-                    print("#", end='')
-                print()
+                    rect.append("#")
+                rect.append("\n")
+            return ("".join(rect))
         else:
             return ("")
 
