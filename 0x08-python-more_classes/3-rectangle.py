@@ -47,7 +47,10 @@ class Rectangle:
             for h in range(self.__height):
                 for w in range(self.__width):
                     rect.append("#")
-                rect.append("\n")
+
+                # print new line except for the last line
+                if h < (self.__height - 1):
+                    rect.append("\n")
             return ("".join(rect))
         else:
             return ("")
