@@ -45,7 +45,8 @@ class Rectangle:
                 for w in range(self.__width):
                     print("#", end='')
                 print()
-        return ("")
+        else:
+            return ("")
 
     def area(self):
         '''computes area of a rectangle'''
