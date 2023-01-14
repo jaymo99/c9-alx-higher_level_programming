@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 '''
-Defines a function that adds to integers
+0-add_integer module.
+
+This module defines a function that adds to integers
 '''
 
 
