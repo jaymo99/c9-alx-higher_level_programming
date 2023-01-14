@@ -37,11 +37,12 @@ def matrix_divided(matrix, div):
     for sublist in matrix:
         if len(sublist) != length:
             raise TypeError("Each row of the matrix must have \
-                            the same size")
+                    the same size")
 
     if not all(isinstance(i, (int, float)) for sublist in matrix
                for i in sublist):
-        raise TypeError("matrix should only contain numbers")
+        raise TypeError("matrix must be a matrix(list of lists) \
+                        of integers/floats")
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
