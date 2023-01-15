@@ -85,9 +85,10 @@ TypeError: Each row of the matrix must have the same size
 ...     [4, 5, 6]
 ... ]
 >>> print(matrix_divided(matrix))
-traceback (most recent call last):
+Traceback (most recent call last):
 ...
-typeerror: matrix_divided() missing 1 required positional argument: 'matrix' and 'div'
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
 
 >>> print(matrix_divided())
 Traceback (most recent call last):
