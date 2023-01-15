@@ -20,8 +20,8 @@ NOTE:
 	* Returns a new matrix
 
 
-Examples:
-=========
+Examples (Tests):
+=================
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 >>> 
 >>> matrix = [
@@ -32,3 +32,64 @@ Examples:
 [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 >>> print(matrix)
 [[1, 2, 3], [4, 5, 6]]
+
+
+:: Division by Zero
+-------------------
+>>> print(matrix_divided(matrix, 0))
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+
+
+:: String values in matrix
+--------------------------
+>>> matrix = [
+...     ["one", 2, 3],
+...     [4, "five", 6]
+... ]
+>>> print(matrix_divided(matrix, 2))
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+:: div as a string
+------------------
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5, 6]
+... ]
+>>> print(matrix_divided(matrix, "four"))
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+
+:: Different size rows
+----------------------
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5, 6, 7]
+... ]
+>>> print(matrix_divided(matrix, 7))
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+
+:: Missing arguments
+--------------------
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5, 6]
+... ]
+>>> print(matrix_divided(matrix))
+traceback (most recent call last):
+...
+typeerror: matrix_divided() missing 1 required positional argument: 'matrix' and 'div'
+
+>>> print(matrix_divided())
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'

@@ -30,19 +30,19 @@ def matrix_divided(matrix, div):
     new_matrix = []
 
     if not all(isinstance(i, list) for i in matrix):
-        raise TypeError("matrix must be a matrix(list of lists)"
-                " of integers/floats")
+        raise TypeError("matrix must be a matrix (list of lists)"
+                        " of integers/floats")
 
     length = len(matrix[0])
     for sublist in matrix:
         if len(sublist) != length:
             raise TypeError("Each row of the matrix must have "
-                    "the same size")
+                            "the same size")
 
     if not all(isinstance(i, (int, float)) for sublist in matrix
                for i in sublist):
         raise TypeError("matrix must be a matrix(list of lists)"
-                " of integers/floats")
+                        " of integers/floats")
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
