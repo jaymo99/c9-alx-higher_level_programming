@@ -24,7 +24,7 @@ My name is James Kariuki
 ... except Exception as e:
 ... 	print(e)
 ...
-My name is James
+My name is James 
 >>>
 >>>
 >>> try:
