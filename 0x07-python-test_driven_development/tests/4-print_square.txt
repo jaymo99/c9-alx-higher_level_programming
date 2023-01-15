@@ -1,0 +1,103 @@
+==========================
+4-print_square module
+==========================
+
+This module defines one function:
+	* print_square - prints a square with the character '#'
+
+
+Examples (Tests)
+================
+
+:: Correct Usage
+----------------
+>>> print_square = __import__('4-print_square').print_square
+>>>
+>>> try:
+... 	print_square(4)
+... except Exception as e:
+... 	print(e)
+...
+####
+####
+####
+####
+>>>
+>>>
+>>> try:
+... 	print_square(0)
+... except Exception as e:
+... 	print(e)
+...
+
+>>> try:
+... 	print_square(10)
+... except Exception as e:
+... 	print(e)
+...
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+
+:: String passed as argument
+----------------------------
+>>> try:
+... 	print_square("four")
+... except TypeError as e:
+... 	print(e)
+...
+size must be an integer
+
+
+:: Float passed as argument
+---------------------------
+>>> try:
+... 	print_square(3.20)
+... except TypeError as e:
+... 	print(e)
+...
+size must be an integer
+
+
+:: Missing/incorrect number of arguments
+----------------------------------------
+>>> try:
+... 	print_square()
+... except Exception as e:
+... 	print(e)
+...
+print_square() missing 1 required positional argument: 'size'
+>>>
+>>>
+>>> try:
+... 	print_square(3, 2)
+... except Exception as e:
+... 	print(e)
+...
+print_square() takes 1 positional argument but 2 were given
+
+
+:: Size as a negative value
+---------------------------
+>>> try:
+... 	print_square(-8)
+... except ValueError as e:
+... 	print(e)
+...
+size must be >= 0
+>>>
+>>>
+>>> try:
+... 	print_square(-5.40)
+... except TypeError as e:
+... 	print(e)
+...
+size must be an integer
