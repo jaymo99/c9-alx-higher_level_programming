@@ -4,13 +4,14 @@
 
 from .base import Base
 
+
 class Rectangle(Base):
     '''
     This class represents a rectangle.
 
     It inherits from Base class and has additional attributes to
     represent the width and height of the rectangle
-    
+
     It has an 'x' and 'y' attribute representing its position on
     a cartesian plane.
     '''
@@ -56,7 +57,7 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
-        
+
     @property
     def x(self):
         return (self.__x)
@@ -80,3 +81,10 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        '''
+        Returns the area value of the Rectangle instance
+        '''
+
+        return (self.width * self.height)
