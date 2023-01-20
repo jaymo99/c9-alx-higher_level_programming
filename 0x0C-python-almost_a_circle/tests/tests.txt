@@ -1,0 +1,20 @@
+===============
+Models package
+===============
+
+This package contains contains several modules
+
+
+Examples
+========
+>>> from models.base import Base
+>>> 
+>>> obj1 = Base()
+>>> obj1.id
+1
+>>> obj2 = Base()
+>>> obj2.id
+2
+>>> obj3 = Base(89)
+>>> obj3.id
+89
