@@ -14,5 +14,5 @@ class TestBase(unittest.TestCase):
         obj2 = Base()
         self.assertEqual(obj2.id, 2)
 
-        obj3 = Base(12)
-        self.assertEqual(obj3.id, 12)
+        obj3 = Base(89)
+        self.assertEqual(obj3.id, 89)
